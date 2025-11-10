@@ -1,4 +1,4 @@
-# 🧠 RL Task: Train and Export a Neural Network to ONNX
+# 🧠 LLM Training Task: Train a Neural Network for classification
 
 This repository contains a **Reinforcement Learning (RL) training task** designed to teach large language models (LLMs) how to **train a PyTorch neural network**, **export it to ONNX**, and **evaluate model performance** — a realistic ML engineering workflow.
 
@@ -26,7 +26,7 @@ The task tests the LLM’s ability to reason about:
 
 ## ⚙️ How It Works
 
-Each iteration of the RL loop simulates an **interactive coding session** between the model and a set of predefined tools.
+Each iteration simulates an **interactive coding session** between the model and a set of predefined tools.
 
 ### Tools
 

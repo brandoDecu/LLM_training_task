@@ -129,7 +129,7 @@ Working directory: {tmpdir}
 
 # === Conversation loop ===
 def run_task(tmpdir):
-    max_calls = 2
+    max_calls = 4
     calls_made = 0
     user_prompt = gen_prompt(tmpdir, max_calls)
     messages = [{"role": "user", "content": user_prompt}]

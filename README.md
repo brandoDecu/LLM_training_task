@@ -39,7 +39,7 @@ The model is allowed to use two tools:
 
 1. A random classification dataset is generated with 10 features using `sklearn.make_classification`.
 2. The model receives the dataset and instructions via the prompt.
-3. It can make up to **two tool calls** to complete the task.
+3. It can make up to **four tool calls** to complete the task, giving it a chance to correct errors.
 4. After training, the grader loads `model.onnx`, runs inference with `onnxruntime`, and computes test accuracy.
 5. Success is recorded if accuracy ≥ 0.875.
 
@@ -129,21 +129,3 @@ Test accuracy: 0.8800
 
 Completed 10 tasks with success rate of: 30%
 ```
-
----
-
-## 🧠 Design Insights
-
-* **Skill Taught:** Practical ML model training, evaluation, and export.
-* **Varied Failure Modes:** Poor model choice, wrong ONNX export, misaligned output shapes, insufficient training.
-* **Reinforcement Feedback:** The grading function provides measurable feedback, ideal for policy learning.
-
----
-
-## 👨‍💻 Author
-
-Developed as part of the **AIChamp RL Task Submission** for training and evaluating LLMs on applied ML engineering tasks.
-
----
-
-Would you like me to make it slightly shorter (for a submission-friendly version under ~1 page) or keep this detailed format?

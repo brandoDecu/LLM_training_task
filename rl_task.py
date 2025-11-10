@@ -65,13 +65,13 @@ def run_tool(name, input_data, cwd):
                 cwd=cwd,
                 capture_output=True,
                 text=True,
-                timeout=60,
+                timeout=200,
             )
             return {"stdout": result.stdout, "stderr": result.stderr}
         except subprocess.TimeoutExpired:
             return {
                 "stdout": "",
-                "stderr": "Error: Script execution timed out after 60 seconds"
+                "stderr": "Error: Script execution timed out after 200 seconds"
             }
         except Exception as e:
             return {
@@ -118,7 +118,7 @@ Your task:
 
 Once you see test accuracy >= 0.85, respond with "TASK COMPLETE".
 
-Warning: the python code times out at 60 seconds. So periodically save the best model.
+Warning: the python code times out at 200 seconds. So periodically save the best model.
 
 You can call `write_file` to create files and `run_python` to execute them.
 Working directory: {tmpdir}

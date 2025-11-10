@@ -61,10 +61,8 @@ The model is allowed to use two tools:
 
 * Python 3.9+
 * Dependencies:
+anthropic numpy pandas scikit-learn torch onnx onnxruntime
 
-  ```bash
-  pip install anthropic numpy pandas scikit-learn torch onnxruntime
-  ```
 * Anthropic API key (free tier supported)
 
 ### Run the Task

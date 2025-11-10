@@ -114,9 +114,9 @@ Your task:
 1. Write Python code to train a neural network in PyTorch on train.csv.
 2. After training, save the trained model in **ONNX format** to a file called `model.onnx`.
 3. Print both the train and test accuracy in your Python script.
-4. Your goal is to reach at least 0.85 test accuracy.
+4. Your goal is to reach at least 0.875 test accuracy.
 
-Once you see test accuracy >= 0.85, respond with "TASK COMPLETE".
+Once you see test accuracy >= 0.875, respond with "TASK COMPLETE".
 
 Warning: the python code times out at 200 seconds. So periodically save the best model.
 
@@ -218,11 +218,11 @@ def grade_task(tmpdir):
         
         print(f"Test accuracy: {accuracy:.4f}")
         
-        if accuracy >= 0.85:
+        if accuracy >= 0.875:
             num_successes += 1
             print("✓ Task succeeded!")
         else:
-            print("✗ Task failed - accuracy below 0.85")
+            print("✗ Task failed - accuracy below 0.875")
             
     except Exception as e:
         print(f"✗ Task failed with error: {e}")
